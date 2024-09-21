@@ -49,6 +49,14 @@ function keyPressed()
 }
 
 
+function mousePressed()
+{
+    current++;
+    if (current >= slides.length)
+        current = 0;
+}
+
+
 function windowResized() 
 {
     resizeCanvas(windowWidth, windowHeight);
@@ -59,6 +67,7 @@ function slide_intro()
 {
     background(0);
     fill(255);
+    stroke(255);
     textSize(32);
     textAlign(CENTER, CENTER);
     text("Hello, world!", width/2, height/2);
